@@ -64,7 +64,7 @@ const Process = () => {
                   {step.number}
                 </div>
                 
-                <Card className="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-0 shadow-medium bg-background/90 backdrop-blur-sm">
+                <Card className="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-0 shadow-medium bg-background/90 backdrop-blur-sm h-full flex flex-col">
                   <CardHeader className="pb-4 text-center">
                     <div className="w-12 h-12 bg-primary/10 border-2 border-primary/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <step.icon className="h-6 w-6 text-primary" />
@@ -74,7 +74,7 @@ const Process = () => {
                     </CardTitle>
                   </CardHeader>
                   
-                  <CardContent className="text-center">
+                  <CardContent className="text-center flex-grow">
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {step.description}
                     </p>
