@@ -53,10 +53,10 @@ const Advantages = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {advantages.map((advantage, index) => (
-            <Card key={index} className="group hover:shadow-large transition-all duration-300 hover:scale-105 border-0 shadow-soft bg-background/80 backdrop-blur-sm">
+            <Card key={index} className="group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-0 shadow-medium bg-background/90 backdrop-blur-sm">
               <CardHeader className="pb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <advantage.icon className="h-8 w-8 text-primary-foreground" />
+                <div className="w-16 h-16 bg-primary/10 border-2 border-primary/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <advantage.icon className="h-8 w-8 text-primary" />
                 </div>
                 <CardTitle className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                   {advantage.title}

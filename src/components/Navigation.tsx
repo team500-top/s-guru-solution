@@ -16,11 +16,17 @@ const Navigation = () => {
   return (
     <nav className="bg-background/95 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="text-xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-              1S-GURU.RU
+          <Link to="/" className="flex items-center space-x-4">
+            <img 
+              src="/lovable-uploads/e6bb4d9e-0433-4756-8d1e-ba9545c68e1f.png" 
+              alt="TEAM500 Logo" 
+              className="h-10 w-auto"
+            />
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-foreground">1С-Эксперт</span>
+              <span className="text-sm text-muted-foreground">Автоматизация бизнеса</span>
             </div>
           </Link>
 
@@ -30,7 +36,7 @@ const Navigation = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-sm font-medium transition-all duration-300 hover:text-primary hover:shadow-hover px-3 py-2 rounded-md ${
                   location.pathname === item.path
                     ? "text-primary"
                     : "text-muted-foreground"

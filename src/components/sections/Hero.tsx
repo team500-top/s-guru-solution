@@ -22,12 +22,21 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="group shadow-large hover:shadow-xl transition-all duration-300">
+            <Button 
+              size="lg" 
+              className="group shadow-large hover:shadow-xl transition-all duration-300"
+              onClick={() => window.open('https://t.me/mgm5500', '_blank')}
+            >
               <CheckCircle className="mr-2 h-5 w-5" />
               Получить бесплатную консультацию и аудит 1С
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="lg" className="hover:bg-primary/5 transition-all duration-300">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="hover:bg-primary/5 hover:shadow-hover transition-all duration-300"
+              onClick={() => document.getElementById('cases')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Наши кейсы
             </Button>
           </div>

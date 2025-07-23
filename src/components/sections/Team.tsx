@@ -43,11 +43,11 @@ const Team = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {teamMembers.map((member, index) => (
-            <Card key={index} className="hover:shadow-large transition-all duration-300 border-0 shadow-medium bg-background/90 backdrop-blur-sm">
+            <Card key={index} className="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-0 shadow-medium bg-background/90 backdrop-blur-sm">
               <CardHeader>
                 <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <User className="h-8 w-8 text-primary-foreground" />
+                  <div className="w-16 h-16 bg-primary/10 border-2 border-primary/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <User className="h-8 w-8 text-primary" />
                   </div>
                   <div className="flex-1">
                     <CardTitle className="text-xl font-bold text-foreground mb-2">

@@ -63,11 +63,11 @@ const Cases = () => {
           <CarouselContent>
             {cases.map((caseStudy, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
-                <Card className="hover:shadow-large transition-all duration-300 border-0 shadow-medium bg-background/90 backdrop-blur-sm h-full">
+                <Card className="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-0 shadow-medium bg-background/90 backdrop-blur-sm h-full">
                   <CardHeader>
                     <div className="flex items-start gap-4 mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center flex-shrink-0">
-                        <caseStudy.icon className="h-6 w-6 text-primary-foreground" />
+                      <div className="w-12 h-12 bg-primary/10 border-2 border-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <caseStudy.icon className="h-6 w-6 text-primary" />
                       </div>
                       <div>
                         <Badge variant="secondary" className="mb-2">{caseStudy.company}</Badge>

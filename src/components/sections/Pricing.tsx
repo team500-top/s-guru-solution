@@ -53,7 +53,7 @@ const Pricing = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {plans.map((plan, index) => (
-            <Card key={index} className={`relative hover:shadow-large transition-all duration-300 hover:scale-105 border-0 shadow-medium bg-background/90 backdrop-blur-sm ${plan.popular ? 'ring-2 ring-primary' : ''}`}>
+            <Card key={index} className={`relative hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-0 shadow-medium bg-background/90 backdrop-blur-sm ${plan.popular ? 'ring-2 ring-primary' : ''}`}>
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <Badge className="bg-gradient-to-r from-primary to-primary-dark text-primary-foreground px-4 py-1">
@@ -63,8 +63,8 @@ const Pricing = () => {
               )}
               
               <CardHeader className="pb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center mb-4">
-                  <plan.icon className="h-6 w-6 text-primary-foreground" />
+                <div className="w-12 h-12 bg-primary/10 border-2 border-primary/20 rounded-xl flex items-center justify-center mb-4">
+                  <plan.icon className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle className="text-2xl font-bold text-foreground mb-2">
                   {plan.name}

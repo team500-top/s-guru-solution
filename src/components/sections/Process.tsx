@@ -60,13 +60,13 @@ const Process = () => {
             {steps.map((step, index) => (
               <div key={index} className="relative">
                 {/* Step number circle */}
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-full text-2xl font-bold text-primary-foreground mx-auto mb-6 lg:mb-8 relative z-10">
+                <div className="flex items-center justify-center w-16 h-16 bg-primary border-4 border-primary/20 rounded-full text-2xl font-bold text-primary-foreground mx-auto mb-6 lg:mb-8 relative z-10">
                   {step.number}
                 </div>
                 
-                <Card className="hover:shadow-large transition-all duration-300 hover:scale-105 border-0 shadow-medium bg-background/90 backdrop-blur-sm">
+                <Card className="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-0 shadow-medium bg-background/90 backdrop-blur-sm">
                   <CardHeader className="pb-4 text-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary-dark/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <div className="w-12 h-12 bg-primary/10 border-2 border-primary/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <step.icon className="h-6 w-6 text-primary" />
                     </div>
                     <CardTitle className="text-lg font-semibold text-foreground leading-tight">
