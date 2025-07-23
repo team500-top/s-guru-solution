@@ -48,7 +48,7 @@ const Cases = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-primary/5 to-secondary/20">
+    <section id="cases" className="py-20 bg-gradient-to-b from-primary/5 to-secondary/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">

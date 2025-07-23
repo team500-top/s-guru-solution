@@ -64,10 +64,10 @@ const Process = () => {
                   {step.number}
                 </div>
                 
-                <Card className="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-0 shadow-medium bg-background/90 backdrop-blur-sm h-64 flex flex-col">
+                <Card className="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-0 shadow-medium bg-background/90 backdrop-blur-sm h-72 flex flex-col">
                   <CardHeader className="pb-3 text-center">
-                    <div className="w-10 h-10 bg-primary/10 border-2 border-primary/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                      <step.icon className="h-5 w-5 text-primary" />
+                    <div className="w-12 h-12 bg-primary/10 border-2 border-primary/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                      <step.icon className="h-6 w-6 text-primary" />
                     </div>
                     <CardTitle className="text-base font-semibold text-foreground leading-tight mb-2">
                       {step.title}
@@ -76,7 +76,7 @@ const Process = () => {
                   
                   <CardContent className="text-center flex-grow relative overflow-hidden p-4">
                     <div className="relative h-full">
-                      <p className="text-xs text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-muted-foreground leading-relaxed">
                         {step.description}
                       </p>
                       <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-background/90 to-transparent pointer-events-none"></div>
@@ -88,8 +88,12 @@ const Process = () => {
           </div>
         </div>
 
-        <div className="text-center mt-16">
-          <Button size="lg" className="group shadow-large hover:shadow-xl transition-all duration-300">
+        <div className="text-center mt-12">
+          <Button 
+            size="lg" 
+            className="group shadow-large hover:shadow-xl transition-all duration-300"
+            onClick={() => window.open('https://t.me/mgm5500', '_blank')}
+          >
             Заказать консультацию
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
