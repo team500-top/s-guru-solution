@@ -42,12 +42,8 @@ const Pricing = () => {
     <section className="py-20 bg-gradient-to-b from-secondary/20 to-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-              Честное ценообразование:
-            </span>
-            <br />
-            <span className="text-foreground">прозрачно и выгодно</span>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
+            Честное ценообразование: прозрачно и выгодно
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Мы предлагаем гибкие форматы сотрудничества, которые значительно выгоднее, чем у конкурентов, 

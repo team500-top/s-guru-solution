@@ -43,7 +43,11 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="default" size="sm">
+            <Button 
+              variant="default" 
+              size="sm"
+              onClick={() => window.open('https://t.me/mgm5500', '_blank')}
+            >
               Консультация
             </Button>
           </div>
@@ -78,7 +82,12 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button variant="default" size="sm" className="w-fit">
+              <Button 
+                variant="default" 
+                size="sm" 
+                className="w-fit"
+                onClick={() => window.open('https://t.me/mgm5500', '_blank')}
+              >
                 Консультация
               </Button>
             </div>

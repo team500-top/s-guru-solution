@@ -30,12 +30,8 @@ const Team = () => {
     <section className="py-20 bg-gradient-to-b from-secondary/20 to-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-              Наши эксперты —
-            </span>
-            <br />
-            <span className="text-foreground">ваш успех</span>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
+            Наши эксперты — ваш успех
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Мы — это более 35 инженеров, дизайнеров и аналитиков, а также 12 ключевых специалистов, 

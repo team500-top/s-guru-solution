@@ -12,12 +12,8 @@ const Hero = () => {
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-primary via-primary-dark to-primary bg-clip-text text-transparent">
-              Ваша 1С должна приносить деньги,
-            </span>
-            <br />
-            <span className="text-foreground">а не проблемы</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-foreground">
+            Ваша 1С должна приносить деньги, а не проблемы
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">

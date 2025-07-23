@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Quote, Factory, ShoppingCart, Globe, Building2 } from "lucide-react";
 
 const Cases = () => {
@@ -50,68 +51,70 @@ const Cases = () => {
     <section className="py-20 bg-gradient-to-b from-primary/5 to-secondary/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-              Наши успешные проекты:
-            </span>
-            <br />
-            <span className="text-foreground">500+ реализованных решений</span>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
+            Наши успешные проекты: 500+ реализованных решений
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Посмотрите, как мы помогли компаниям из разных отраслей достичь своих целей с помощью 1С.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {cases.map((caseStudy, index) => (
-            <Card key={index} className="hover:shadow-large transition-all duration-300 border-0 shadow-medium bg-background/90 backdrop-blur-sm">
-              <CardHeader>
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center flex-shrink-0">
-                    <caseStudy.icon className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <div>
-                    <Badge variant="secondary" className="mb-2">{caseStudy.company}</Badge>
-                    <CardTitle className="text-lg font-semibold text-foreground leading-tight">
-                      {caseStudy.title}
-                    </CardTitle>
-                  </div>
-                </div>
-              </CardHeader>
-              
-              <CardContent className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Проблема клиента:</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{caseStudy.problem}</p>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Наше решение:</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{caseStudy.solution}</p>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Результат:</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{caseStudy.result}</p>
-                </div>
-                
-                <div className="bg-gradient-to-r from-primary/5 to-primary-light/5 rounded-lg p-4 border-l-4 border-primary">
-                  <div className="flex items-start gap-2">
-                    <Quote className="h-4 w-4 text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="text-sm text-foreground italic leading-relaxed mb-2">
-                        "{caseStudy.testimonial}"
-                      </p>
-                      <p className="text-xs text-muted-foreground">
-                        — {caseStudy.representative}
-                      </p>
+        <Carousel className="w-full max-w-6xl mx-auto">
+          <CarouselContent>
+            {cases.map((caseStudy, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
+                <Card className="hover:shadow-large transition-all duration-300 border-0 shadow-medium bg-background/90 backdrop-blur-sm h-full">
+                  <CardHeader>
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center flex-shrink-0">
+                        <caseStudy.icon className="h-6 w-6 text-primary-foreground" />
+                      </div>
+                      <div>
+                        <Badge variant="secondary" className="mb-2">{caseStudy.company}</Badge>
+                        <CardTitle className="text-lg font-semibold text-foreground leading-tight">
+                          {caseStudy.title}
+                        </CardTitle>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                  </CardHeader>
+                  
+                  <CardContent className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Проблема клиента:</h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{caseStudy.problem}</p>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Наше решение:</h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{caseStudy.solution}</p>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Результат:</h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{caseStudy.result}</p>
+                    </div>
+                    
+                    <div className="bg-gradient-to-r from-primary/5 to-primary-light/5 rounded-lg p-4 border-l-4 border-primary">
+                      <div className="flex items-start gap-2">
+                        <Quote className="h-4 w-4 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="text-sm text-foreground italic leading-relaxed mb-2">
+                            "{caseStudy.testimonial}"
+                          </p>
+                          <p className="text-xs text-muted-foreground">
+                            — {caseStudy.representative}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
 
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-primary/10 to-primary-light/10 rounded-2xl p-8 border border-primary/20">
