@@ -1,6 +1,7 @@
 {
-    "name": "1S-GURU.RU",
+    "name": "1S-GURU.RU - Автоматизация и внедрение 1С",
     "short_name": "1S-GURU",
+    "description": "Технологический партнер для бизнеса. Разработка, внедрение и сопровождение решений на платформе 1С",
     "icons": [
         {
             "src": "/favicon-16x16.png",
@@ -20,5 +21,7 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone"
+    "display": "standalone",
+    "start_url": "/",
+    "scope": "/"
 }
