@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { ArticleRating } from "@/components/ArticleRating";
 
 const Blog1SDlyaIP = () => {
   useEffect(() => {
@@ -375,32 +376,13 @@ const Blog1SDlyaIP = () => {
             </p>
           </section>
 
-          {/* Reviews Section */}
+          {/* Rating and Comments Section */}
           <section className="mb-12">
-            <h2 className="text-3xl font-bold mb-6">Комментарии пользователей</h2>
-            <div className="space-y-6">
-              {reviews.map((review, index) => (
-                <Card key={index}>
-                  <CardContent className="pt-6">
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h4 className="font-semibold">{review.author}</h4>
-                        <p className="text-sm text-muted-foreground">{review.role}</p>
-                      </div>
-                      <div className="flex">
-                        {[1, 2, 3, 4, 5].map((star) => (
-                          <Star 
-                            key={star} 
-                            className={`w-4 h-4 ${star <= review.rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} 
-                          />
-                        ))}
-                      </div>
-                    </div>
-                    <p className="text-muted-foreground">{review.text}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <ArticleRating 
+              reviews={reviews}
+              currentRating={4.8}
+              totalReviews={14}
+            />
           </section>
 
           {/* Conclusion */}
@@ -436,30 +418,6 @@ const Blog1SDlyaIP = () => {
             </Card>
           </section>
 
-          {/* Rating Section */}
-          <section>
-            <Card>
-              <CardHeader>
-                <CardTitle>Оцените статью и оставьте комментарий</CardTitle>
-                <CardDescription>
-                  Нам важно ваше мнение! Оцените статью и поделитесь своим опытом использования 1С для ИП.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center justify-center gap-4 mb-6">
-                  <span>Ваша оценка:</span>
-                  <div className="flex gap-1">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={star} className="w-6 h-6 text-gray-300 hover:text-yellow-400 cursor-pointer" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-sm text-muted-foreground text-center">
-                  Ваша оценка и комментарий будут опубликованы после модерации.
-                </p>
-              </CardContent>
-            </Card>
-          </section>
         </div>
       </div>
     </div>
