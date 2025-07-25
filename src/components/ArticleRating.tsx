@@ -196,6 +196,9 @@ export const ArticleRating = ({ reviews, currentRating, totalReviews }: ArticleR
                 <ChevronDown className="w-5 h-5" />
               )}
             </Button>
+            <p className="text-sm text-muted-foreground mt-2">
+              Все комментарии и оценки публикуются после модерации
+            </p>
           </CardHeader>
 
           {showComments && (
