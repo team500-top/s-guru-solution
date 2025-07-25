@@ -44,35 +44,40 @@ export const ArticleRating = ({ reviews, currentRating, totalReviews }: ArticleR
     setIsSubmitting(true);
 
     try {
-      // Отправляем данные на сервер
-      const response = await fetch('/api/reviews', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          rating,
-          comment: comment.trim(),
-          name: name.trim(),
-          email: 'valentin.butyugin@gmail.com',
-          page: window.location.pathname,
-          timestamp: new Date().toISOString()
-        }),
-      });
+      // Формируем данные для отправки
+      const reviewData = {
+        rating,
+        comment: comment.trim(),
+        name: name.trim(),
+        page: window.location.pathname,
+        timestamp: new Date().toLocaleString('ru-RU')
+      };
 
-      if (response.ok) {
-        toast({
-          title: "Спасибо за вашу оценку!",
-          description: "Ваш комментарий был отправлен и появится на странице после модерации.",
-        });
-        
-        // Сбрасываем форму
-        setRating(0);
-        setComment("");
-        setName("");
-      } else {
-        throw new Error('Ошибка отправки');
-      }
+      // Создаем mailto ссылку
+      const subject = encodeURIComponent(`Новая оценка статьи: ${window.location.pathname}`);
+      const body = encodeURIComponent(
+        `Новая оценка статьи!\n\n` +
+        `Страница: ${reviewData.page}\n` +
+        `Имя: ${reviewData.name}\n` +
+        `Оценка: ${reviewData.rating}/5\n` +
+        `Комментарий: ${reviewData.comment}\n` +
+        `Время: ${reviewData.timestamp}`
+      );
+      
+      const mailtoUrl = `mailto:valentin.butyugin@gmail.com?subject=${subject}&body=${body}`;
+      
+      // Открываем почтовый клиент
+      window.open(mailtoUrl, '_blank');
+
+      toast({
+        title: "Спасибо за вашу оценку!",
+        description: "Ваш комментарий был отправлен и появится на странице после модерации.",
+      });
+      
+      // Сбрасываем форму
+      setRating(0);
+      setComment("");
+      setName("");
     } catch (error) {
       toast({
         title: "Ошибка отправки",
