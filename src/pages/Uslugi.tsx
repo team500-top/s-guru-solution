@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 import { 
   Calculator, 
   HeadphonesIcon, 
@@ -24,6 +25,30 @@ import {
 } from "lucide-react";
 
 const Uslugi = () => {
+  // Mapping названий услуг на их URL
+  const serviceLinks = {
+    "Внедрение 1С:Бухгалтерия": "/uslugi/vnedrenie-1s-buhgalteriya",
+    "Абонентское сопровождение 1С": "/uslugi/abonentskoe-soprovozhdenie-1s",
+    "Внедрение 1С:Управление торговлей": "/uslugi/vnedrenie-1s-upravlenie-torgovley",
+    "Внедрение 1С:Зарплата и управление персоналом": "/uslugi/vnedrenie-1s-zup",
+    "Доработки и развитие 1С": "/uslugi/dorabotka-1s",
+    "Внедрение 1С:ERP Управление предприятием": "/uslugi/vnedrenie-1s-erp",
+    "Интеграция 1С с внешними системами": "/uslugi/integraciya-1s",
+    "Внедрение 1С:УНФ": "/uslugi/vnedrenie-1s-unf",
+    "Внедрение 1С:Розница": "/uslugi/vnedrenie-1s-roznitsa",
+    "Внедрение 1С:Комплексная автоматизация": "/uslugi/vnedrenie-1s-kompleksnaya-avtomatizaciya",
+    "Внедрение 1С:Документооборот": "/uslugi/vnedrenie-1s-dokumentooborot",
+    "Переход с 1С 7.7 на 1С 8.3": "/uslugi/perehod-s-1s-7-7-na-8-3",
+    "Отраслевые решения 1С": "/uslugi/vnedrenie-otraslevyh-resheniy-1s",
+    "Удаленное сопровождение 1С": "/uslugi/udalennoe-soprovozhdenie-1s",
+    "Аудит и оптимизация 1С": "/uslugi/audit-1s",
+    "Настройка ЭДО в 1С": "/uslugi/nastrojka-edo-v-1s",
+    "Настройка маркировки и ЕГАИС": "/uslugi/nastrojka-markirovki-egais-v-1s",
+    "1С в облаке": "/uslugi/arenda-1s-v-oblake",
+    "Администрирование серверов 1С": "/uslugi/administrirovanie-serverov-1s",
+    "Обновление нетиповых конфигураций": "/uslugi/obnovlenie-netipovoj-1s"
+  };
+
   const mainServices = [
     {
       icon: Calculator,
@@ -178,9 +203,17 @@ const Uslugi = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button variant="outline" className="w-full mt-4">
-                    Подробнее об услуге
-                  </Button>
+                  {serviceLinks[service.title] ? (
+                    <Button asChild variant="outline" className="w-full mt-4">
+                      <Link to={serviceLinks[service.title]}>
+                        Подробнее об услуге
+                      </Link>
+                    </Button>
+                  ) : (
+                    <Button variant="outline" className="w-full mt-4" disabled>
+                      Скоро
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             ))}
@@ -207,9 +240,17 @@ const Uslugi = () => {
                   <CardDescription className="text-muted-foreground leading-relaxed mb-4">
                     {service.description}
                   </CardDescription>
-                  <Button variant="outline" size="sm" className="w-full">
-                    Подробнее
-                  </Button>
+                  {serviceLinks[service.title] ? (
+                    <Button asChild variant="outline" size="sm" className="w-full">
+                      <Link to={serviceLinks[service.title]}>
+                        Подробнее
+                      </Link>
+                    </Button>
+                  ) : (
+                    <Button variant="outline" size="sm" className="w-full" disabled>
+                      Скоро
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             ))}
