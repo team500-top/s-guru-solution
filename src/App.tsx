@@ -11,6 +11,7 @@ import Vnedrenie1SBuhgalteriya from "./pages/Vnedrenie1SBuhgalteriya";
 import AbonentskoeSoprovozhdenie1S from "./pages/AbonentskoeSoprovozhdenie1S";
 import Vnedrenie1SUpravljenieTorgovlej from "./pages/Vnedrenie1SUpravljenieTorgovlej";
 import Vnedrenie1SZUP from "./pages/Vnedrenie1SZUP";
+import Dorabotka1S from "./pages/Dorabotka1S";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 
@@ -31,6 +32,7 @@ const App = () => (
               <Route path="uslugi/abonentskoe-soprovozhdenie-1s" element={<AbonentskoeSoprovozhdenie1S />} />
               <Route path="uslugi/vnedrenie-1s-upravlenie-torgovley" element={<Vnedrenie1SUpravljenieTorgovlej />} />
               <Route path="uslugi/vnedrenie-1s-zup" element={<Vnedrenie1SZUP />} />
+              <Route path="uslugi/dorabotka-1s" element={<Dorabotka1S />} />
               <Route path="blog" element={<Blog />} />
               <Route path="*" element={<NotFound />} />
             </Route>
