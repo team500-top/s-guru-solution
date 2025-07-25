@@ -243,7 +243,7 @@ const Blog1SDlyaIP = () => {
             </p>
 
             {/* Comparison Table */}
-            <Card className="mb-8">
+            <Card className="mb-8 border-0 shadow-none">
               <CardHeader>
                 <CardTitle>Сравнительный анализ подходов к ведению учета для ИП</CardTitle>
               </CardHeader>
@@ -251,7 +251,7 @@ const Blog1SDlyaIP = () => {
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
-                      <tr className="border-b">
+                      <tr className="">
                         <th className="text-left p-4 font-semibold">Подход</th>
                         <th className="text-left p-4 font-semibold">Преимущества</th>
                         <th className="text-left p-4 font-semibold">Недостатки</th>
@@ -260,7 +260,7 @@ const Blog1SDlyaIP = () => {
                     </thead>
                     <tbody>
                       {comparisonData.map((row, index) => (
-                        <tr key={index} className="border-b">
+                        <tr key={index} className="">
                           <td className="p-4 font-medium">{row.approach}</td>
                           <td className="p-4 text-sm">{row.pros}</td>
                           <td className="p-4 text-sm">{row.cons}</td>
@@ -286,7 +286,7 @@ const Blog1SDlyaIP = () => {
             </p>
 
             <div className="grid gap-6 mb-8">
-              <Card>
+              <Card className="border-0 shadow-none">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Calculator className="h-5 w-5" />
@@ -300,7 +300,7 @@ const Blog1SDlyaIP = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-0 shadow-none">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Shield className="h-5 w-5" />
@@ -314,7 +314,7 @@ const Blog1SDlyaIP = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-0 shadow-none">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Users className="h-5 w-5" />
@@ -337,39 +337,39 @@ const Blog1SDlyaIP = () => {
               Поскольку 1С:Бухгалтерия является наиболее универсальным решением для большинства ИП, давайте рассмотрим ее подробнее.
             </p>
 
-            <Card className="mb-6">
-              <CardHeader>
-                <CardTitle>1С:Бухгалтерия позволяет:</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span>Вести учет по всем системам налогообложения: УСН (Доходы, Доходы минус расходы), Патент, ОСНО.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span>Автоматически формировать книги учета доходов и расходов (КУДИР).</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span>Рассчитывать налоги и взносы.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span>Готовить и отправлять регламентированную отчетность (декларации, СЗВ-ТД, 4-ФСС и др.).</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span>Вести учет банковских операций и кассы.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span>Работать с контрагентами и договорами.</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+             <Card className="mb-6 border-0 shadow-none">
+               <CardHeader>
+                 <CardTitle>1С:Бухгалтерия позволяет:</CardTitle>
+               </CardHeader>
+               <CardContent>
+                 <ul className="space-y-3">
+                   <li className="flex items-start gap-2">
+                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                     <span>Вести учет по всем системам налогообложения: УСН (Доходы, Доходы минус расходы), Патент, ОСНО.</span>
+                   </li>
+                   <li className="flex items-start gap-2">
+                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                     <span>Автоматически формировать книги учета доходов и расходов (КУДИР).</span>
+                   </li>
+                   <li className="flex items-start gap-2">
+                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                     <span>Рассчитывать налоги и взносы.</span>
+                   </li>
+                   <li className="flex items-start gap-2">
+                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                     <span>Готовить и отправлять регламентированную отчетность (декларации, СЗВ-ТД, 4-ФСС и др.).</span>
+                   </li>
+                   <li className="flex items-start gap-2">
+                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                     <span>Вести учет банковских операций и кассы.</span>
+                   </li>
+                   <li className="flex items-start gap-2">
+                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                     <span>Работать с контрагентами и договорами.</span>
+                   </li>
+                 </ul>
+               </CardContent>
+             </Card>
 
             <p>
               Для быстрого старта в программе важна правильная первичная настройка.
@@ -397,26 +397,26 @@ const Blog1SDlyaIP = () => {
           </section>
 
           {/* CTA Section */}
-          <section className="mb-12">
-            <Card className="bg-gradient-to-r from-primary/10 to-primary-glow/10 border-primary/20">
-              <CardContent className="pt-6 text-center">
-                <h3 className="text-2xl font-bold mb-4">Хотите узнать, какая 1С подходит именно вам?</h3>
-                <p className="mb-6 text-muted-foreground">
-                  Оставьте заявку на бесплатную консультацию, и мы поможем вам принять верное решение!
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow">
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    Бесплатная консультация
-                  </Button>
-                  <Button variant="outline" size="lg">
-                    <Download className="w-4 h-4 mr-2" />
-                    Чек-лист для ИП
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </section>
+           <section className="mb-12">
+             <Card className="bg-gradient-to-r from-primary/10 to-primary-glow/10 border-0 shadow-none">
+               <CardContent className="pt-6 text-center">
+                 <h3 className="text-2xl font-bold mb-4">Хотите узнать, какая 1С подходит именно вам?</h3>
+                 <p className="mb-6 text-muted-foreground">
+                   Оставьте заявку на бесплатную консультацию, и мы поможем вам принять верное решение!
+                 </p>
+                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                   <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow">
+                     <MessageCircle className="w-4 h-4 mr-2" />
+                     Бесплатная консультация
+                   </Button>
+                   <Button variant="outline" size="lg">
+                     <Download className="w-4 h-4 mr-2" />
+                     Чек-лист для ИП
+                   </Button>
+                 </div>
+               </CardContent>
+             </Card>
+           </section>
 
         </div>
       </div>
