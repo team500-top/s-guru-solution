@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 interface Review {
   author: string;
@@ -44,34 +45,23 @@ export const ArticleRating = ({ reviews, currentRating, totalReviews }: ArticleR
     setIsSubmitting(true);
 
     try {
-      // Формируем данные для отправки
-      const reviewData = {
-        rating,
-        comment: comment.trim(),
-        name: name.trim(),
-        page: window.location.pathname,
-        timestamp: new Date().toLocaleString('ru-RU')
-      };
+      // Сохраняем отзыв в базу данных
+      const { error } = await supabase
+        .from('article_reviews')
+        .insert({
+          article_url: window.location.pathname,
+          author_name: name.trim(),
+          rating: rating,
+          comment: comment.trim()
+        });
 
-      // Создаем mailto ссылку
-      const subject = encodeURIComponent(`Новая оценка статьи: ${window.location.pathname}`);
-      const body = encodeURIComponent(
-        `Новая оценка статьи!\n\n` +
-        `Страница: ${reviewData.page}\n` +
-        `Имя: ${reviewData.name}\n` +
-        `Оценка: ${reviewData.rating}/5\n` +
-        `Комментарий: ${reviewData.comment}\n` +
-        `Время: ${reviewData.timestamp}`
-      );
-      
-      const mailtoUrl = `mailto:valentin.butyugin@gmail.com?subject=${subject}&body=${body}`;
-      
-      // Открываем почтовый клиент
-      window.open(mailtoUrl, '_blank');
+      if (error) {
+        throw error;
+      }
 
       toast({
         title: "Спасибо за вашу оценку!",
-        description: "Ваш комментарий был отправлен и появится на странице после модерации.",
+        description: "Ваш отзыв сохранен. Администратор сможет просмотреть его в панели управления.",
       });
       
       // Сбрасываем форму
@@ -79,9 +69,10 @@ export const ArticleRating = ({ reviews, currentRating, totalReviews }: ArticleR
       setComment("");
       setName("");
     } catch (error) {
+      console.error('Error saving review:', error);
       toast({
         title: "Ошибка отправки",
-        description: "Не удалось отправить вашу оценку. Попробуйте позже.",
+        description: "Не удалось сохранить вашу оценку. Попробуйте позже.",
         variant: "destructive",
       });
     } finally {

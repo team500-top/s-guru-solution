@@ -62,6 +62,36 @@ export type Database = {
         }
         Relationships: []
       }
+      article_reviews: {
+        Row: {
+          article_url: string
+          author_name: string
+          comment: string | null
+          created_at: string
+          id: string
+          rating: number
+          updated_at: string
+        }
+        Insert: {
+          article_url: string
+          author_name: string
+          comment?: string | null
+          created_at?: string
+          id?: string
+          rating: number
+          updated_at?: string
+        }
+        Update: {
+          article_url?: string
+          author_name?: string
+          comment?: string | null
+          created_at?: string
+          id?: string
+          rating?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
       site_pages: {
         Row: {
           author: string | null
