@@ -14,7 +14,6 @@ import Vnedrenie1SZUP from "./pages/Vnedrenie1SZUP";
 import Vnedrenie1SERP from "./pages/Vnedrenie1SERP";
 import Dorabotka1S from "./pages/Dorabotka1S";
 import Blog from "./pages/Blog";
-import Blog1SDlyaIP from "./pages/Blog1SDlyaIP";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,7 +36,6 @@ const App = () => (
               <Route path="uslugi/vnedrenie-1s-erp" element={<Vnedrenie1SERP />} />
               <Route path="uslugi/dorabotka-1s" element={<Dorabotka1S />} />
               <Route path="blog" element={<Blog />} />
-              <Route path="blog/1s-dlya-ip" element={<Blog1SDlyaIP />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
