@@ -61,7 +61,7 @@ export const ArticleRating = ({ reviews, currentRating, totalReviews }: ArticleR
 
       toast({
         title: "Спасибо за вашу оценку!",
-        description: "Ваш отзыв сохранен. Администратор сможет просмотреть его в панели управления.",
+        description: "Ваш комментарий и оценка будут опубликованы после модерации.",
       });
       
       // Сбрасываем форму
