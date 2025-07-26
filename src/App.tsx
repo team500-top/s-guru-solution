@@ -15,6 +15,7 @@ import Vnedrenie1SERP from "./pages/Vnedrenie1SERP";
 import Dorabotka1S from "./pages/Dorabotka1S";
 import Blog from "./pages/Blog";
 import Blog1SDlyaIP from "./pages/Blog1SDlyaIP";
+import Legal from "./pages/Legal";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const App = () => (
               <Route path="uslugi/dorabotka-1s" element={<Dorabotka1S />} />
               <Route path="blog" element={<Blog />} />
               <Route path="blog/1s-dlya-ip" element={<Blog1SDlyaIP />} />
+              <Route path="legal" element={<Legal />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

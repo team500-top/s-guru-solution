@@ -1,21 +1,34 @@
 import { Phone, Mail, MessageCircle, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="bg-background border-t border-border/50 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="text-xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent mb-4">
+            <div className="text-xl font-bold text-primary mb-4">
               1S-GURU.RU
             </div>
             <p className="text-muted-foreground mb-4">
               Эксперты по 1С с 2001 года. Превращаем 1С из сложной учетной программы в простой и надежный инструмент для вашего бизнеса.
             </p>
-            <div className="text-sm text-muted-foreground">
-              <p className="mb-2"><strong>Главный офис:</strong></p>
-              <p>Москва, ул. 1-я Фрезерная, д.2/1, с.1</p>
+          </div>
+
+          {/* Navigation Links */}
+          <div>
+            <h3 className="font-semibold text-foreground mb-4">Навигация</h3>
+            <div className="space-y-2">
+              <Link to="/uslugi" className="block text-muted-foreground hover:text-primary transition-colors">
+                Услуги
+              </Link>
+              <Link to="/blog" className="block text-muted-foreground hover:text-primary transition-colors">
+                Блог
+              </Link>
+              <Link to="/legal" className="block text-muted-foreground hover:text-primary transition-colors">
+                Правовая информация
+              </Link>
             </div>
           </div>
 
@@ -48,10 +61,18 @@ const Footer = () => {
 
           {/* Offices */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Офисы разработки</h3>
-            <div className="space-y-2 text-muted-foreground">
-              <p>Ереван, Армения</p>
-              <p>Алматы, Казахстан</p>
+            <h3 className="font-semibold text-foreground mb-4">Адреса офисов</h3>
+            <div className="space-y-4 text-muted-foreground text-sm">
+              <div>
+                <p className="font-medium mb-1">Основной офис</p>
+                <p>Казахстан, 050057, г. Алматы, Бостандыкский район, пр. Гагарина, 124</p>
+              </div>
+              <div>
+                <p className="font-medium mb-1">Региональные офисы</p>
+                <p className="mb-1">США: 2400 Market St, Philadelphia, PA 19103</p>
+                <p className="mb-1">Армения: г. Ереван, ул. Ерванда Кочара, 1</p>
+                <p>Россия: г. Москва (услуги оказываются через партнеров, уточняйте у менеджеров)</p>
+              </div>
             </div>
           </div>
         </div>
