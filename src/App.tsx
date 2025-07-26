@@ -16,6 +16,7 @@ import Dorabotka1S from "./pages/Dorabotka1S";
 import Blog from "./pages/Blog";
 import Blog1SDlyaIP from "./pages/Blog1SDlyaIP";
 import AvtomatizaciyaNalogovVBuh from "./pages/blog/AvtomatizaciyaNalogovVBuh";
+import NastrojkaUchetnojPolitikiVBuh from "./pages/blog/NastrojkaUchetnojPolitikiVBuh";
 import Legal from "./pages/Legal";
 import NotFound from "./pages/NotFound";
 
@@ -41,6 +42,7 @@ const App = () => (
               <Route path="blog" element={<Blog />} />
               <Route path="blog/1s-dlya-ip" element={<Blog1SDlyaIP />} />
               <Route path="blog/avtomatizaciya-nalogov-v-buh" element={<AvtomatizaciyaNalogovVBuh />} />
+              <Route path="blog/nastrojka-uchetnoj-politiki-v-buh" element={<NastrojkaUchetnojPolitikiVBuh />} />
               <Route path="legal" element={<Legal />} />
               <Route path="*" element={<NotFound />} />
             </Route>
