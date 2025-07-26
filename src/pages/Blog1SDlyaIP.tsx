@@ -207,7 +207,7 @@ const Blog1SDlyaIP = () => {
 
         {/* Article Header */}
         <div className="mb-12">
-          <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold mb-6">
             Какую 1С выбрать для ИП в 2025 году? Сравнение решений и цен
           </h1>
           
@@ -405,14 +405,14 @@ const Blog1SDlyaIP = () => {
                    Оставьте заявку на бесплатную консультацию, и мы поможем вам принять верное решение!
                  </p>
                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                   <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow">
-                     <MessageCircle className="w-4 h-4 mr-2" />
-                     Бесплатная консультация
-                   </Button>
-                   <Button variant="outline" size="lg">
-                     <Download className="w-4 h-4 mr-2" />
-                     Чек-лист для ИП
-                   </Button>
+                    <Button size="lg">
+                      <MessageCircle className="w-4 h-4 mr-2" />
+                      Бесплатная консультация
+                    </Button>
+                    <Button variant="outline" size="lg" className="border-0">
+                      <Download className="w-4 h-4 mr-2" />
+                      Чек-лист для ИП
+                    </Button>
                  </div>
                </CardContent>
              </Card>

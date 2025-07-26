@@ -104,14 +104,14 @@ export const ArticleRating = ({ reviews, currentRating, totalReviews }: ArticleR
   return (
     <div className="space-y-6">
       {/* Current Rating Display */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
+      <Card className="border-0 shadow-none bg-gradient-to-br from-background to-secondary/30 p-4">
+        <CardHeader className="pb-3">
+          <CardTitle className="flex items-center gap-2 text-lg">
             <Star className="w-5 h-5" />
             Оценка статьи
           </CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="pt-0">
           <div className="flex items-center gap-4 mb-6">
             <div className="flex">
               {renderStars(Math.round(currentRating))}
@@ -179,14 +179,14 @@ export const ArticleRating = ({ reviews, currentRating, totalReviews }: ArticleR
 
       {/* Comments Section */}
       {reviews.length > 0 && (
-        <Card>
-          <CardHeader>
+        <Card className="border-0 shadow-none bg-gradient-to-br from-background to-secondary/30 p-4">
+          <CardHeader className="pb-3">
             <Button
               variant="ghost"
               onClick={() => setShowComments(!showComments)}
               className="w-full justify-between p-0 h-auto"
             >
-              <CardTitle className="flex items-center gap-2">
+              <CardTitle className="flex items-center gap-2 text-lg">
                 <MessageCircle className="w-5 h-5" />
                 Комментарии пользователей ({reviews.length})
               </CardTitle>
@@ -202,7 +202,7 @@ export const ArticleRating = ({ reviews, currentRating, totalReviews }: ArticleR
           </CardHeader>
 
           {showComments && (
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-4 pt-0">
               {reviews.map((review, index) => (
                 <div
                   key={index}
