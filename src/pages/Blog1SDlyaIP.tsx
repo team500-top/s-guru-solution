@@ -376,15 +376,6 @@ const Blog1SDlyaIP = () => {
             </p>
           </section>
 
-          {/* Rating and Comments Section */}
-          <section className="mb-12">
-            <ArticleRating 
-              reviews={reviews}
-              currentRating={4.8}
-              totalReviews={14}
-            />
-          </section>
-
           {/* Conclusion */}
           <section className="mb-12">
             <h2 className="text-3xl font-bold mb-6">Заключение: Поможем выбрать и настроить вашу идеальную 1С</h2>
@@ -394,6 +385,15 @@ const Blog1SDlyaIP = () => {
             <p className="mb-6">
               Наша команда экспертов готова помочь вам на каждом этапе: от выбора оптимальной конфигурации 1С до ее полного внедрения и настройки под специфику вашего бизнеса. Мы обладаем более чем 20-летним опытом и реализовали сотни проектов для компаний разного масштаба.
             </p>
+          </section>
+
+          {/* Rating and Comments Section */}
+          <section className="mb-12">
+            <ArticleRating 
+              reviews={reviews}
+              currentRating={4.8}
+              totalReviews={14}
+            />
           </section>
 
           {/* CTA Section */}
