@@ -19,6 +19,8 @@ import AvtomatizaciyaNalogovVBuh from "./pages/blog/AvtomatizaciyaNalogovVBuh";
 import NastrojkaUchetnojPolitikiVBuh from "./pages/blog/NastrojkaUchetnojPolitikiVBuh";
 import Legal from "./pages/Legal";
 import NotFound from "./pages/NotFound";
+import RobotsTxt from "./components/RobotsTxt";
+import SitemapXml from "./components/SitemapXml";
 
 const queryClient = new QueryClient();
 
@@ -44,8 +46,10 @@ const App = () => (
               <Route path="blog/avtomatizaciya-nalogov-v-buh" element={<AvtomatizaciyaNalogovVBuh />} />
               <Route path="blog/nastrojka-uchetnoj-politiki-v-buh" element={<NastrojkaUchetnojPolitikiVBuh />} />
               <Route path="legal" element={<Legal />} />
-              <Route path="*" element={<NotFound />} />
             </Route>
+            <Route path="robots.txt" element={<RobotsTxt />} />
+            <Route path="sitemap.xml" element={<SitemapXml />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
