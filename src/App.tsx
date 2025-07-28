@@ -20,7 +20,6 @@ import NastrojkaUchetnojPolitikiVBuh from "./pages/blog/NastrojkaUchetnojPolitik
 import Legal from "./pages/Legal";
 import NotFound from "./pages/NotFound";
 import RobotsTxt from "./components/RobotsTxt";
-import SitemapXml from "./components/SitemapXml";
 
 const queryClient = new QueryClient();
 
@@ -48,7 +47,6 @@ const App = () => (
               <Route path="legal" element={<Legal />} />
             </Route>
             <Route path="robots.txt" element={<RobotsTxt />} />
-            <Route path="sitemap.xml" element={<SitemapXml />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

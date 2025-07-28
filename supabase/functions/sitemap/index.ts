@@ -1,8 +1,6 @@
-import { useEffect } from 'react';
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
 
-const SitemapXml = () => {
-  useEffect(() => {
-    const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
+const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://1s-guru.ru/</loc>
@@ -84,21 +82,11 @@ const SitemapXml = () => {
   </url>
 </urlset>`;
 
-    // Полностью заменяем документ на XML
-    document.open();
-    document.write(sitemapContent);
-    document.close();
-    
-    // Устанавливаем правильный MIME-type
-    if (document.contentType) {
-      Object.defineProperty(document, 'contentType', {
-        value: 'application/xml',
-        writable: false
-      });
-    }
-  }, []);
-
-  return null;
-};
-
-export default SitemapXml;
+serve(async (req) => {
+  return new Response(sitemapXml, {
+    headers: {
+      "Content-Type": "application/xml; charset=utf-8",
+      "Cache-Control": "public, max-age=86400",
+    },
+  })
+})
