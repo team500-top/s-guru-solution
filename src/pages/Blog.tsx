@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import BlogPagesFinder from "@/components/BlogPagesFinder";
+import StaticBlogPagesFinder from "@/components/StaticBlogPagesFinder";
 
 const Blog = () => {
   return (
@@ -15,7 +15,7 @@ const Blog = () => {
 
         {/* Blog Posts Grid - moved up */}
         <div className="mb-16">
-          <BlogPagesFinder />
+          <StaticBlogPagesFinder />
         </div>
 
         {/* Authors Section - moved down */}
