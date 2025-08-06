@@ -14,7 +14,6 @@ export default defineConfig(({ mode }) => ({
     },
     assetsDir: 'assets',
     sourcemap: false,
-    minify: 'terser',
   },
   server: {
     host: "::",
